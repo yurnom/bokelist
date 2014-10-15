@@ -5,7 +5,8 @@
  */
 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/../framework/yii.php';
+ini_set('date.timezone','Asia/Shanghai'); 
+$yii=dirname(__FILE__).'/yii/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/test.php';
 
 // remove the following line when in production mode

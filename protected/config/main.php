@@ -5,9 +5,11 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
+	'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'聚博客', 
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -28,10 +30,18 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		*/
+		'gii'=>array(
+			'generatorPaths'=>array(
+					'bootstrap.gii',
+			),
+		),
 	),
 
 	// application components
 	'components'=>array(
+		'bootstrap'=>array(
+			'class'=>'bootstrap.components.Bootstrap',
+		),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
