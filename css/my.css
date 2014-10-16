@@ -1,0 +1,9 @@
+#content {
+	margin-top: -61px;
+}
+.mynavbar-fixed-top {
+	right: 0px;
+	left: 0px;
+	z-index: 1030;
+}
+
