@@ -10,343 +10,171 @@ $this->pageTitle=Yii::app()->name;
 		<!--Body content-->
 	<div class="site-index">
 		<section id="tbAll">
-			<div class="page-header"><h1>综合 <small>添加简介</small></h1></div>
-			<div class="table-responsive"> 
-				<table class="table table-striped table-bordered">
-			   <tbody>
-			      <tr>
-			         <td><a href="http://coolshell.cn/">酷壳</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.nowamagic.net/">简明现代魔法</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://mindhacks.cn">刘未鹏 | MIND HACKS</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			   </tbody>
-			</table>
+			<div class="page-header"><h1>综合 <small>专注于互联网资讯与技术分享</small></h1></div>
+			<div class="row-fluid">
+			  <div class="span6">
+			  	<table class="table table-striped">
+				  	<tbody>
+		                <tr>
+		                  <td><a href="http://coolshell.cn/" target="_blank">Coolshell</a></td>
+		                  <td>互联网大牛陈皓的个人博客，技术向</td>
+		                </tr>
+		                <tr>
+		                  <td><a href="http://www.ruanyifeng.com/blog/" target="_blank">阮一峰的网络日志</a></td>
+		                  <td>Js+各种杂项</td>
+		                </tr>
+		                <tr>
+		                  <td><a href="http://mindhacks.cn/" target="_blank">Mind Hacks</a></td>
+		                  <td>偏机器学习、算法和数学</td>
+		                </tr>
+		               
+	                </tbody>
+				</table>
+			  </div>
+			  <div class="span6">
+				  <table class="table table-striped">
+					  	<tbody>
+			                <tr>
+			                  <td><a href="http://www.nowamagic.net/" target="_blank">简明现代魔法</a></td>
+			                  <td>互联网资讯分享，娱乐向</td>
+			                </tr>
+			                <tr>
+			                  <td><a href="http://blog.jobbole.com/" target="_blank">伯乐在线</a></td>
+			                  <td>分享博文、资讯的好地方</td>
+			                </tr>
+		                </tbody>
+					</table>
+			  	
+			  </div>
 			</div>
-        </section>
+		</section>
         
-        <section id="tbJava">
-			<div class="page-header"><h1>编程语言 <small>下面为子类展示方法1</small></h1></div>
-			<h3>Java <small>添加简介</small></h3>
-			<div class="table-responsive"> 
-				<table class="table table-striped table-bordered">
-			   <tbody>
-			      <tr>
-			         <td><a href="http://blog.hesey.net/">舒の随想日记</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://ifeve.com/">并发编程网</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://jade.is-programmer.com/">温其如玉</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.liaoxuefeng.com/">廖雪峰的官方网站</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			       <tr>
-			         <td><a href="http://blog.jeoygin.org/">尘嚣之外</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://kenwublog.com/">Ken Wu's Blog</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-				   </tbody>
-			</table>
-			</div>
-		
-        </section>
-        <section id="tbScala">
-			<h3>Scala <small>添加简介</small></h3>
-			<p>添加导航，具体样式待定
-        </section>
-        <section id="tbClojure">
-			<h3>Clojure <small>添加简介</small></h3>
-			<p>添加导航，具体样式待定
-        </section>
-        
-<?php          /** 添加完全导航 20141020*/?>  
-        
-        <section id="tbDatamining">
-   		<div class="page-header"><h1>数据挖掘 <small>下面为子类展示方法1</small></h1></div>
-        			<div class="table-responsive"> 
-				<table class="table table-striped table-bordered">
-			   <tbody>
-			      <tr>
-			         <td><a href="http://1.guzili.sinaapp.com/">谷子粒</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.bjt.name/">刘思喆@贝吉塔行星</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.matrix67.com/blog/">Matrix67: The Aha Moments</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://blog.csdn.net/abcjennifer">Rachel Zhang的专栏</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			       <tr>
-			         <td><a href="http://cos.name/">统计之都</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-				   </tbody>
-			</table>
-			</div>
-        </section>
-
-        <section id="tbBigdata">
-   		<div class="page-header"><h1>大数据 <small>下面为子类展示方法1</small></h1></div>
-        	<div class="table-responsive"> 
-				<table class="table table-striped table-bordered">
-			   <tbody>
-			      <tr>
-			         <td><a href="http://fleurer-lee.com/">初心</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://blog.fens.me/">粉丝日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.geedoo.info/">极豆技术博客</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://dongxicheng.org/">董的博客</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://xumingming.sinaapp.com/">徐明明</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.rigongyizu.com/">日拱一卒</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.flyne.org/">flyne</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.parallellabs.com/">并行实验室</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://shiyanjun.cn/">简单之美</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://selfup.cn/">程序员的自我修养</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr> 
-				  </tbody>
-			</table>
-			</div>
-   		</section>
-
-        <section id="tbAlgorithm">
-   		<div class="page-header"><h1>算法<small>下面为子类展示方法1</small></h1></div>
-        		<div class="table-responsive"> 
-				<table class="table table-striped table-bordered">
-			   <tbody>
-			      <tr>
-			         <td><a href="http://www.codelast.com/">编码无悔</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://blog.csdn.net/v_july_v">结构之法 算法之道</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-				   </tbody>
-			</table>
-			</div>
-   		</section>
-
-        <section id="tbML">
-   		<div class="page-header"><h1>机器学习 <small>下面为子类展示方法1</small></h1></div>
-        </section>
-
-        <section id="tbDatabase">
-  		 <div class="page-header"><h1>数据库技术 <small>下面为子类展示方法1</small></h1></div>
-        </section>
-
-        <section id="tbGame">
-  		<div class="page-header"><h1>游戏开发<small>下面为子类展示方法1</small></h1></div>
-       		<div class="table-responsive"> 
-				<table class="table table-striped table-bordered">
-			   <tbody>
-			      <tr>
-			         <td><a href="http://ns.codingnow.com/">云风的 BLOG</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-				   </tbody>
-			</table>
-			</div>
-  		</section>
-
-        
-        <section id="tbAndriod">
-   		<div class="page-header"><h1>移动开发 <small>下面为子类展示方法1</small></h1></div>	
-   		<h3>Andriod<small>添加简介</small></h3>
-        </section>
-        
-        <section id="tbiOS">
-			<h3>iOS <small>添加简介</small></h3>
-			<p>添加导航，具体样式待定
-        </section>
-
-        
-        <section id="tbView">
-   		<div class="page-header"><h1>其他 <small>下面为子类展示方法1</small></h1></div>
-        <h3>可视化 <small>添加简介</small></h3>
-        <div class="table-responsive"> 
-			<table class="table table-striped table-bordered">
-		   <tbody>
-		      <tr>
-		         <td><a href="http://flowingdata.com/">FlowingData</a></td>
-		         <td>Visualization and Statistics</td>
-		      </tr>
-		      <tr>
-		         <td><a href="http://bost.ocks.org/mike/">Mike Bostock</a></td>
-		         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-		      </tr>
-		      <tr>
-		         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-		         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-		      </tr>
-		      <tr>
-		         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-		         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-		      </tr>
-		   </tbody>
-		</table>
-		</div>
-        
-        </section>
-
-        <section id="tbSAS">
-   		<h3>SAS <small>下面为子类展示方法1</small></h3>
-   		<div class="table-responsive"> 
-			<table class="table table-striped table-bordered">
-		   <tbody>
-		      <tr>
-		         <td><a href="http://crackman.net/">跟crackman学sas编程</a></td>
-		         <td>SAS编程|SAS资源下载|SAS技巧学习|SAS互助交流平台</td>
-		      </tr>
-		      <tr>
-		         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-		         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-		      </tr>
-		      <tr>
-		         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-		         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-		      </tr>
-		      <tr>
-		         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-		         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-		      </tr>
-		   </tbody>
-		</table>
-		</div>
-   		
-        </section>
-        
-        
-<?php        /**  以下为第二类展示方法
-        <section id="tbJava">
-			<div class="page-header"><h1>移动开发 <small>下面为子类展示方法2</small></h1></div>
+        <section id="tbJvm">
+			<div class="page-header"><h1>编程语言 </h1></div>
 			<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
 			  <ul class="nav nav-tabs">
-			    <li class="active"><a href="#tab1" data-toggle="tab">Android</a></li>
-			    <li><a href="#tab2" data-toggle="tab">iOS</a></li>
+			    <li class="active" id="tbJava"><a href="#tabJava" data-toggle="tab">Java</a></li>
+			    <li id="tbScala"><a href="#tabScala" data-toggle="tab">Scala</a></li>
+			    <li id="tbClojure"><a href="#tabClojure" data-toggle="tab">Clojure</a></li>
 			  </ul>
 			  <div class="tab-content">
-			    <div class="tab-pane active" id="tab1">
-			      <p>Android导航</p>
+			    <div class="tab-pane active" id="tabJava">
+			    	<div class="row-fluid">
+					  <div class="span6">
+					  	<table class="table table-striped">
+						  	<tbody>
+				                <tr>
+				                  <td><a href="http://selfup.cn/" target="_blank">程序员的自我修养</a></td>
+				                  <td>Java+大数据+初级机器学习</td>
+				                </tr>
+				                <tr>
+				                  <td><a href="http://ifeve.com/" target="_blank">并发编程网</a></td>
+				                  <td>专注Java的分享平台</td>
+				                </tr>
+				                <tr>
+				                  <td><a href="http://blog.hesey.net/" target="_blank">舒の随想日记</a></td>
+				                  <td>Java，技术向</td>
+				                </tr>
+				                <tr>
+				                  <td><a href="http://www.liaoxuefeng.com/" target="_blank">廖雪峰的官方网站</a></td>
+				                  <td>Git、Python</td>
+				                </tr>
+				               
+			                </tbody>
+						</table>
+					  </div>
+					  <div class="span6">
+						  <table class="table table-striped">
+							  	<tbody>
+					                <tr>
+					                  <td><a href="http://jade.is-programmer.com/" target="_blank">温其如玉</a></td>
+					                </tr>
+					                <tr>
+					                  <td><a href="http://blog.jeoygin.org/" target="_blank">尘嚣之外</a></td>
+					                </tr>
+					                <tr>
+					                  <td><a href="http://kenwublog.com/" target="_blank">Ken Wu's Blog</a></td>
+					                </tr>
+				                </tbody>
+							</table>
+					  	
+					  </div>
+					</div>
 			    </div>
-			    <div class="tab-pane" id="tab2">
-			      <p>iOS导航</p>
+			    <div class="tab-pane" id="tabScala">
+			    </div>
+			    <div class="tab-pane" id="tabClojure">
 			    </div>
 			  </div>
 			</div>
         </section>
-        
-        
-        以下为表格格式
-        			<div class="table-responsive"> 
-				<table class="table table-striped table-bordered">
-			   <tbody>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-			      <tr>
-			         <td><a href="http://www.baidu.com/">xxx的网络日志</a></td>
-			         <td>这里是xxx的个人Blog，欢迎访问和留言！</td>
-			      </tr>
-				   </tbody>
-			</table>
+        <section id="tbDatamining">
+			<div class="page-header"><h1>数据挖掘 <small>数据之美</small></h1></div>
+			<div class="row-fluid">
+			  <div class="span6">
+			  	<table class="table table-striped">
+				  	<tbody>
+		                <tr>
+		                  <td><a href="http://www.matrix67.com/blog/" target="_blank">Matrix67: The Aha Moments</a></td>
+		                  <td>数学游戏+智力题+奇怪的东西</td>
+		                </tr>
+		                <tr><td><a href="http://www.bjt.name/" target="_blank">刘思喆@贝吉塔行星</a></td><td>R语言</td></tr>
+	                </tbody>
+				</table>
+			  </div>
+			  <div class="span3">
+				  <table class="table table-striped">
+					  	<tbody>
+			                <tr><td><a href="http://blog.csdn.net/abcjennifer" target="_blank">Rachel Zhang的专栏</a></td></tr>
+			                <tr><td><a href="http://1.guzili.sinaapp.com/" target="_blank">谷子粒</a></td></tr>
+		                </tbody>
+					</table>
+			  </div>
+			  <div class="span3">
+				  <table class="table table-striped">
+					  	<tbody>
+			                <tr><td><a href="http://cos.name/" target="_blank">统计之都</a></td></tr>
+		                </tbody>
+					</table>
+			  </div>
 			</div>
-        
-        */?> 
-        
+		</section>
+		<section id="tbBigdata">
+			<div class="page-header"><h1>大数据 <small>Hadoop+Spark+Storm+...</small></h1></div>
+			<div class="row-fluid">
+			  <div class="span4">
+			  	<table class="table table-striped">
+				  	<tbody>
+		                <tr><td><a href="http://fleurer-lee.com/" target="_blank">初心</a></td><td></td></tr>
+		                <tr><td><a href="http://blog.fens.me/" target="_blank">粉丝日志</a></td><td><span class="label label-important">更新</span></td></tr>
+		                <tr><td><a href="http://www.parallellabs.com/" target="_blank">并行实验室</a></td><td></td></tr>
+	                </tbody>
+				</table>
+			  </div>
+			  <div class="span4">
+				  <table class="table table-striped">
+					  	<tbody>
+			                <tr><td><a href="http://www.geedoo.info/" target="_blank">极豆技术博客</a></td><td></td></tr>
+			                <tr><td><a href="http://dongxicheng.org/" target="_blank">董的博客</a></td><td><span class="label label-success">推荐</span></td></tr>
+			                <tr><td><a href="http://shiyanjun.cn/" target="_blank">简单之美</a></td><td></td></tr>
+		                </tbody>
+					</table>
+			  </div>
+			  <div class="span4">
+				  <table class="table table-striped">
+					  	<tbody>
+			                <tr><td><a href="http://xumingming.sinaapp.com/" target="_blank">徐明明</a></td><td></td></tr>
+			                <tr><td><a href="http://www.rigongyizu.com/" target="_blank">日拱一卒</a></td><td></td></tr>
+			                <tr><td><a href="http://www.flyne.org/" target="_blank">flyne</a></td><td></td></tr>
+		                </tbody>
+					</table>
+			  </div>
+			</div>
+		</section>
     </div>
     </div>
     <div class="span3">
-      <!--Sidebar content-->右侧边栏
+      <!--Sidebar content-->
     </div>
   </div>
 </div>

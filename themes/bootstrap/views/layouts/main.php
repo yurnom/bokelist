@@ -31,7 +31,7 @@
 <header class="jumbotron subhead" id="overview">
   <div class="container">
     <h1>聚博客</h1>
-    <p class="lead">一个优质的IT博客聚集地</p>
+    <p class="lead">优质IT博客的聚集地——分享，从这里开始</p>
   </div>
 </header>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -45,8 +45,9 @@
 			<a class="brand" style="color: #ffffff">聚博客</a>
 			<div class="nav-collapse" id="yii_bootstrap_collapse_0">
 				<ul id="yw0" class="nav">
-					<li class="active"><a href="#">首页</a></li>
-					<li><a href="#">关于本站</a></li>
+					<li class="active"><a href="/site/index">首页</a></li>
+					<li><a href="#">思维导图计划</a></li>
+					<li><a href="/site/about">关于本站</a></li>
 					<li><a href="#">意见反馈</a></li>
 				</ul>
 				<form class="navbar-search pull-left" action="">
@@ -90,8 +91,13 @@
 					<li><a href="#tbBigdata">大数据</a></li>
 					<li><a href="#tbAlgorithm">算法</a></li>
 					<li><a href="#tbML">机器学习</a></li>
-					<li><a href="#tbDatabase">数据库技术</a></li>
-					<li><a href="#tbGame">游戏开发</a></li>
+					<li><a href="#tbDatabase">数据库</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">游戏开发 <span class="caret"></span></a>
+						<ul id="yw52" class="dropdown-menu">
+							<li><a tabindex="-1" href="#tbCocos2d">Cocos2d-X</a></li>
+							<li><a tabindex="-1" href="#tbU3D">U3D</a></li>
+						</ul>
+					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">移动开发 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
 							<li><a tabindex="-1" href="#tbAndriod">Andriod</a></li>
@@ -149,14 +155,21 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/application.js"></script>
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/stickUp.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.scrollUp.min.js"></script>
 <script type="text/javascript">
 	//initiating jQuery
 	jQuery(function($) {
 		$(document).ready( function() {
 			//enabling stickUp on the '.navbar-wrapper' class
 			$('.myroll').stickUp({
-				topMargin: '40px'
 			});
+		});
+	});
+
+	$(function(){
+		$.scrollUp({
+			animation: 'fade',
+			scrollImg: { active: true, type: 'background' }
 		});
 	});
 </script>
