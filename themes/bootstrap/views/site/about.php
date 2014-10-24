@@ -12,5 +12,6 @@
 <p>yurnom at gmail.com
 <p>or
 <p>ninmomm at gmail.com
-<p align="right">以上 by yurnom
+<p align="right"><strong>以上 by yurnom</strong>
 </p>
+</div>

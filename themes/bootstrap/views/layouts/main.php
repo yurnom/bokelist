@@ -31,7 +31,7 @@
 <header class="jumbotron subhead" id="overview">
   <div class="container">
     <h1>聚博客</h1>
-    <p class="lead">优质IT博客的聚集地——分享，从这里开始</p>
+    <p class="lead">优质IT博客的聚集地</p>
   </div>
 </header>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -45,7 +45,7 @@
 			<a class="brand" style="color: #ffffff">聚博客</a>
 			<div class="nav-collapse" id="yii_bootstrap_collapse_0">
 				<ul id="yw0" class="nav">
-					<li class="active"><a href="/site/index">首页</a></li>
+					<li class="active"><a href="site/index">首页</a></li>
 					<li><a href="#">思维导图计划</a></li>
 					<li><a href="/site/about">关于本站</a></li>
 					<li><a href="#">意见反馈</a></li>
@@ -83,15 +83,35 @@
 							<li><a tabindex="-1" href="#tbCCpp">C/C++</a></li>
 							<li><a tabindex="-1" href="#tbCsharp">C#</a></li>
 							<li class="divider"></li>
+							<li class="nav-header">其它</li>
 							<li><a tabindex="-1" href="#tbPhp">Php</a></li>
-							<li><a tabindex="-1" href="#tbSwift">Swift</a></li>
+							<li><a tabindex="-1" href="#tbPython">Python</a></li>
+							<li><a tabindex="-1" href="#tbNodeJs">NodeJs</a></li>
 						</ul>
 					</li>
-					<li><a href="#tbDatamining">数据挖掘</a></li>
-					<li><a href="#tbBigdata">大数据</a></li>
-					<li><a href="#tbAlgorithm">算法</a></li>
-					<li><a href="#tbML">机器学习</a></li>
-					<li><a href="#tbDatabase">数据库</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">大数据 <span class="caret"></span></a>
+						<ul id="yw52" class="dropdown-menu">
+							<li><a tabindex="-1" href="#tbHadoop">Hadoop</a></li>
+							<li><a tabindex="-1" href="#tbYarn">Hadoop Yarn</a></li>
+							<li><a tabindex="-1" href="#tbSpark">Spark</a></li>
+							<li><a tabindex="-1" href="#tbStorm">Storm</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">算法 <span class="caret"></span></a>
+						<ul id="yw52" class="dropdown-menu">
+							<li><a tabindex="-1" href="#tbDM">数据挖掘</a></li>
+							<li><a tabindex="-1" href="#tbML">机器学习</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">数据库技术 <span class="caret"></span></a>
+						<ul id="yw52" class="dropdown-menu">
+						    <li class="nav-header">NoSql</li>
+							<li><a tabindex="-1" href="#tbOracle">MongoDB</a></li>
+							<li class="nav-header">Sql</li>
+							<li><a tabindex="-1" href="#tbMysql">Mysql</a></li>
+							<li><a tabindex="-1" href="#tbOracle">Oracle</a></li>
+						</ul>
+					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">游戏开发 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
 							<li><a tabindex="-1" href="#tbCocos2d">Cocos2d-X</a></li>
@@ -104,6 +124,15 @@
 							<li><a tabindex="-1" href="#tbiOS">iOS</a></li>
 						</ul>
 					</li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">前端 <span class="caret"></span></a>
+						<ul id="yw52" class="dropdown-menu">
+							<li><a tabindex="-1" href="#tbView">HTML5</a></li>
+							<li><a tabindex="-1" href="#tbSAS">JavaScript</a></li>
+							<li><a tabindex="-1" href="#tbSAS">Css</a></li>
+						</ul>
+					</li>
+					<li><a href="#tbArchitecture">架构</a></li>
+					<li><a href="#tbTest">测试</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">其它 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
 							<li><a tabindex="-1" href="#tbView">可视化</a></li>
@@ -131,13 +160,6 @@
 
 
 <div class="container" id="page">
-
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
 	<?php echo $content; ?>
 	
 	<div class="clear"></div>

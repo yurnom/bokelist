@@ -29,10 +29,13 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$java = Item::model()->findAll("catogry_id=:catogry_id order by rank desc limit 0, 30",array("catogry_id"=>2));
+		
+		$this->render('index',array('java'=>$java)); 
 	}
 	
 	public function actionAbout() {
+		$this->layout='//layouts/main_other';
 		$this->render('about');
 	}
 
