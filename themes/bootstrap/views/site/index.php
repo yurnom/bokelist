@@ -2,6 +2,13 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
+
+//测试
+$enmu = array(
+		'推荐'=>'important',
+		'更新'=>'success',
+		''=>'',
+);
 ?>
 
 <div class="container-fluid">
@@ -46,7 +53,10 @@ $this->pageTitle=Yii::app()->name;
 								$i = 0;
 								foreach($java as $item) { 
 							?>
-				                  <td width="34%"><a href="<?php echo $item->link ?>" target="_blank"><?php echo $item->name ?></a></td>
+				                  <td width="34%">
+				                  	<a href="<?php echo $item->link ?>" target="_blank"><?php echo $item->name ?></a>
+				                  	<?php if($item->FLAG) {?><span class="label label-<?php echo $enmu[$item->FLAG] ?>"><?php echo $item->FLAG ?></span><?php }?>
+				                  </td>
 				            <?php 
 				                	if($i%3 == 2) echo "</tr><tr>";
 									$i++;
