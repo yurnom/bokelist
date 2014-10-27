@@ -54,7 +54,7 @@
 					<input type="text" class="search-query span2" placeholder="Search..">
 				</form>
 				<ul class="pull-right nav" id="yw1">
-					<li><a href="#">提交网站</a></li>
+					<li><a href="/site/addurl">提交网站</a></li>
 					<li><a href="#">注册</a></li>
 					<li><a href="#">登录</a></li>
 				</ul>
@@ -91,13 +91,12 @@
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">大数据 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbHadoop">Hadoop</a></li>
-							<li><a tabindex="-1" href="#tbYarn">Hadoop Yarn</a></li>
+							<li><a tabindex="-1" href="#tbHadoop">Hadoop生态圈</a></li>
 							<li><a tabindex="-1" href="#tbSpark">Spark</a></li>
 							<li><a tabindex="-1" href="#tbStorm">Storm</a></li>
 						</ul>
 					</li>
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">算法 <span class="caret"></span></a>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">算法相关 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
 							<li><a tabindex="-1" href="#tbDM">数据挖掘</a></li>
 							<li><a tabindex="-1" href="#tbML">机器学习</a></li>
@@ -106,29 +105,29 @@
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">数据库技术 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
 						    <li class="nav-header">NoSql</li>
-							<li><a tabindex="-1" href="#tbOracle">MongoDB</a></li>
+							<li><a tabindex="-1" href="#tbMongoDB">MongoDB</a></li>
 							<li class="nav-header">Sql</li>
 							<li><a tabindex="-1" href="#tbMysql">Mysql</a></li>
 							<li><a tabindex="-1" href="#tbOracle">Oracle</a></li>
 						</ul>
 					</li>
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">游戏开发 <span class="caret"></span></a>
+					<!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">游戏开发 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
 							<li><a tabindex="-1" href="#tbCocos2d">Cocos2d-X</a></li>
 							<li><a tabindex="-1" href="#tbU3D">U3D</a></li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">移动开发 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbAndriod">Andriod</a></li>
 							<li><a tabindex="-1" href="#tbiOS">iOS</a></li>
+							<li><a tabindex="-1" href="#tbAndriod">Andriod</a></li>
 						</ul>
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">前端 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbView">HTML5</a></li>
-							<li><a tabindex="-1" href="#tbSAS">JavaScript</a></li>
-							<li><a tabindex="-1" href="#tbSAS">Css</a></li>
+							<li><a tabindex="-1" href="#tbHTML5">HTML5</a></li>
+							<li><a tabindex="-1" href="#tbJavaScript">JavaScript</a></li>
+							<li><a tabindex="-1" href="#tbCss">Css</a></li>
 						</ul>
 					</li>
 					<li><a href="#tbArchitecture">架构</a></li>
@@ -194,6 +193,10 @@
 			scrollImg: { active: true, type: 'background' }
 		});
 	});
+
+	$(function(){
+		$("a[data-toggle=tooltip]").tooltip()
+	})
 </script>
 </body>
 </html>

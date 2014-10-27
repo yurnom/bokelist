@@ -35,7 +35,7 @@ class Item extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, link, CATOGRY_ID', 'required'),
+			array('name, link, CATOGRY_ID', 'required'),
 			array('id, CATOGRY_ID, click, RANK, USER_ID', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>150),
 			array('link, DESCRIPTION', 'length', 'max'=>300),

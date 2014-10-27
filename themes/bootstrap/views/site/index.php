@@ -3,12 +3,6 @@
 
 $this->pageTitle=Yii::app()->name;
 
-//测试
-$enmu = array(
-		'推荐'=>'important',
-		'更新'=>'success',
-		''=>'',
-);
 ?>
 
 <div class="container-fluid">
@@ -18,22 +12,10 @@ $enmu = array(
 	<div class="site-index">
 		<section id="tbAll">
 			<div class="page-header"><h1>综合 <small>专注于互联网资讯与技术分享</small></h1></div>
-			<table class="table table-hover">
-			  	<tbody>
-	                <tr>
-	                  <td width="25%"><a href="http://coolshell.cn/" target="_blank">Coolshell</a> <span class="label label-success">推荐</span></td>
-	                  <td width="25%"><a href="http://www.nowamagic.net/" target="_blank">简明现代魔法</a></td>
-	                  <td width="25%"><a href="http://www.ruanyifeng.com/blog/" target="_blank">阮一峰的网络日志</a></td>
-	                  <td width="25%"><a href="http://blog.jobbole.com/" target="_blank">伯乐在线</a></td>
-	                </tr>
-	                <tr>
-	                  <td><a href="http://mindhacks.cn/" target="_blank">Mind Hacks</a></td>
-	                  <td></td>
-	                  <td></td>
-	                  <td></td>
-	                </tr>
-                </tbody>
-			</table>
+		    	<?php
+				    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$all,'columns'=>4));
+				    $this->endWidget();
+				?>
 		</section>
         
         <section id="tbJvm">
@@ -46,29 +28,10 @@ $enmu = array(
 			  </ul>
 			  <div class="tab-content">
 			    <div class="tab-pane active" id="tabJava">
-			    	<table class="table table-hover">
-					  	<tbody>
-					  		<tr>
-							<?php 
-								$i = 0;
-								foreach($java as $item) { 
-							?>
-				                  <td width="34%">
-				                  	<a href="<?php echo $item->link ?>" target="_blank"><?php echo $item->name ?></a>
-				                  	<?php if($item->FLAG) {?><span class="label label-<?php echo $enmu[$item->FLAG] ?>"><?php echo $item->FLAG ?></span><?php }?>
-				                  </td>
-				            <?php 
-				                	if($i%3 == 2) echo "</tr><tr>";
-									$i++;
-								} 
-								$k = 0;
-								if($i%3 == 1) $k = 2;
-								else if($i%3 == 2) $k = 1;	
-								for($j = 0; $j < $k; $j++) echo "<td></td>"
-							?>
-							</tr>
-		                </tbody>
-					</table>
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$java,'columns'=>3));
+					    $this->endWidget();
+					?>
 			    </div>
 			    <div class="tab-pane" id="tabScala">
 			    </div>
@@ -77,50 +40,167 @@ $enmu = array(
 			  </div>
 			</div>
         </section>
-        <section id="tbDatamining">
-			<div class="page-header"><h1>数据挖掘 <small>挖掘技术哪家强？</small></h1></div>
-			<table class="table table-hover">
-			  	<tbody>
-	                <tr>
-	                  <td width="25%"><a href="http://www.matrix67.com/blog/" target="_blank">Matrix67: The Aha Moments</a></td>
-	                  <td><a href="http://cos.name/" target="_blank">统计之都</a></td>
-	                  <td width="25%"><a href="http://blog.csdn.net/abcjennifer" target="_blank">Rachel Zhang的专栏</a></td>
-	                  <td width="25%"><a href="http://1.guzili.sinaapp.com/" target="_blank">谷子粒</a></td>
-	                </tr>
-	                <tr>
-	                  <td width="25%"><a href="http://www.bjt.name/" target="_blank">刘思喆@贝吉塔行星</a></td>
-	                  <td></td>
-	                  <td></td>
-	                  <td></td>
-	                </tr>
-                </tbody>
-			</table>
+      
+		<section>
+			<div class="page-header"><h1>大数据 <small>Hadoop+Spark+Storm+...</small></h1></div>
+			<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
+			  <ul class="nav nav-tabs">
+			    <li class="active" id="tbHadoop"><a href="#tabHadoop" data-toggle="tab">Hadoop生态圈</a></li>
+			    <li id="tbSpark"><a href="#tabSpark" data-toggle="tab">Spark</a></li>
+			    <li id="tbStorm"><a href="#tabStorm" data-toggle="tab">Storm</a></li>
+			  </ul>
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="tabHadoop">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$hadoop,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabSpark">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$spark,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabStorm">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$storm,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			  </div>
+			</div>
 		</section>
-		<section id="tbBigdata">
-			<div class="page-header"><h1 align="right"><small>Hadoop+Spark+Storm+...</small> 大数据</h1></div>
-			<table class="table table-hover">
-			  	<tbody>
-	                <tr>
-	                  <td><a href="http://fleurer-lee.com/" target="_blank">初心</a></td>
-	                  <td><a href="http://blog.fens.me/" target="_blank">粉丝日志</a> <span class="label label-important">更新</span></td>
-	                  <td><a href="http://www.parallellabs.com/" target="_blank">并行实验室</a></td>
-	                  <td><a href="http://www.geedoo.info/" target="_blank">极豆技术博客</a></td>
-	                </tr>
-	                <tr>
-	                  <td><a href="http://dongxicheng.org/" target="_blank">董的博客</a> <span class="label label-success">推荐</span></td>
-	                  <td><a href="http://shiyanjun.cn/" target="_blank">简单之美</a></td>
-	                  <td><a href="http://xumingming.sinaapp.com/" target="_blank">徐明明</a></td>
-	                  <td><a href="http://www.rigongyizu.com/" target="_blank">日拱一卒</a></td>
-	                </tr>
-	                <tr>
-	                  <td><a href="http://www.flyne.org/" target="_blank">flyne</a></td>
-	                  <td></td>
-	                  <td></td>
-	                  <td></td>
-	                </tr>
-                </tbody>
-			</table>
+		  <section>
+			<div class="page-header"><h1 align="right"><small>体会算法之美</small> 算法相关</h1></div>
+			<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+			  <ul class="nav nav-tabs">
+			    <li class="active" id="tbDM"><a href="#tabDM" data-toggle="tab">数据挖掘</a></li>
+			    <li id="tbML"><a href="#tabML" data-toggle="tab">机器学习</a></li>
+			  </ul>
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="tabDM">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$DM,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabML">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$ML,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			  </div>
+			</div>
 		</section>
+	    <section>
+			<div class="page-header"><h1>数据库技术 <small>Sql & NoSql</small></h1></div>
+			<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
+			  <ul class="nav nav-tabs">
+			    <li class="active" id="tbMongoDB"><a href="#tabMongoDB" data-toggle="tab">MongoDB</a></li>
+			    <li id="tbMysql"><a href="#tabMysql" data-toggle="tab">Mysql</a></li>
+			    <li id="tbOracle"><a href="#tabOracle" data-toggle="tab">Oracle</a></li>
+			  </ul>
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="tabMongoDB">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$mongodb,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabMysql">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$mysql,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabOracle">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$oracle,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			  </div>
+			</div>
+		</section>
+		<!-- <section>
+			<div class="page-header"><h1 align="right"><small></small> 游戏开发</h1></div>
+			<div class="tabbable tabs-left">
+			  <ul class="nav nav-tabs">
+			    <li class="active" id="tbCocos2d"><a href="#tabCocos2d" data-toggle="tab">Cocos2d-X</a></li>
+			    <li id="tbU3D"><a href="#tabU3D" data-toggle="tab">U3D</a></li>
+			  </ul>
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="tabCocos2d">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$cocos2d,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabAndroid">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$u3d,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			  </div>
+			</div>
+        </section> -->
+		<section>
+			<div class="page-header"><h1 align="right"><small>互联网时代</small> 移动开发</h1></div>
+			<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+			  <ul class="nav nav-tabs">
+			    <li class="active" id="tbiOS"><a href="#tabiOS" data-toggle="tab">iOS</a></li>
+			    <li id="tbAndroid"><a href="#tabAndroid" data-toggle="tab">Android</a></li>
+			  </ul>
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="tabiOS">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$iOS,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabAndroid">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$android,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			  </div>
+			</div>
+        </section>
+        <section>
+			<div class="page-header"><h1>前端 <small>Javascript+Css+HTML</small></h1></div>
+			<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
+			  <ul class="nav nav-tabs">
+			    <li class="active" id="tbHTML5"><a href="#tabHTML5" data-toggle="tab">HTML5</a></li>
+			    <li id="tbJavaScript"><a href="#tabJavaScript" data-toggle="tab">JavaScript</a></li>
+			    <li id="tbCss"><a href="#taCss" data-toggle="tab">Css</a></li>
+			  </ul>
+			  <div class="tab-content">
+			    <div class="tab-pane active" id="tabHTML5">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$html5,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabJavaScript">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$javascript,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			    <div class="tab-pane" id="tabCss">
+			    	<?php
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$css,'columns'=>3));
+					    $this->endWidget();
+					?>
+			    </div>
+			  </div>
+			</div>
+		</section>
+        <hr style="border-top:1px dashed #00adef;">
     </div>
     </div>
     <div class="span3">

@@ -19,7 +19,7 @@
 <header class="jumbotron subhead" id="overview">
   <div class="container">
     <h1>聚博客</h1>
-    <p class="lead">优质IT博客的聚集地——分享，从这里开始</p>
+    <p class="lead">优质IT博客的聚集地</p>
   </div>
 </header>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -42,7 +42,7 @@
 					<input type="text" class="search-query span2" placeholder="Search..">
 				</form>
 				<ul class="pull-right nav" id="yw1">
-					<li><a href="#">提交网站</a></li>
+					<li><a href="/site/addurl">提交网站</a></li>
 					<li><a href="#">注册</a></li>
 					<li><a href="#">登录</a></li>
 				</ul>
@@ -80,13 +80,7 @@
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.scrollUp.min.js"></script>
 <script type="text/javascript">
 	//initiating jQuery
-	jQuery(function($) {
-		$(document).ready( function() {
-			//enabling stickUp on the '.navbar-wrapper' class
-			$('.myroll').stickUp({
-			});
-		});
-	});
+	$(".alert").alert()
 
 	$(function(){
 		$.scrollUp({

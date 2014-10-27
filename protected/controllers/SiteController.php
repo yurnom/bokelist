@@ -29,14 +29,73 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$java = Item::model()->findAll("catogry_id=:catogry_id order by rank desc limit 0, 30",array("catogry_id"=>2));
+		$java = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>2));
+		$iOS = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>17));
+		$android = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>18));
+		$all = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 24",array("catogry_id"=>1));
 		
-		$this->render('index',array('java'=>$java)); 
+		$hadoop = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>19));
+		$spark = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>21));
+		$storm = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>22));
+		
+		$DM = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>3));
+		$ML = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>6));
+		
+		$mongodb = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>23));
+		$mysql = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>24));
+		$oracle = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>25));
+		$cocos2d = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>27));
+		$u3d = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>28));
+		
+		$html5 = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>32));
+		$javascript = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>33));
+		$css = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>34));
+		
+		$this->render('index',array(
+				'java'=>$java,
+				'iOS'=>$iOS,
+				'android'=>$android,
+				'all'=>$all,
+				'hadoop'=>$hadoop,
+				'spark'=>$spark,
+				'storm'=>$storm,
+				'DM'=>$DM,
+				'ML'=>$ML,
+				'mongodb'=>$mongodb,
+				'mysql'=>$mysql,
+				'oracle'=>$oracle,
+				'cocos2d'=>$cocos2d,
+				'u3d'=>$u3d,
+				'html5'=>$html5,
+				'javascript'=>$javascript,
+				'css'=>$css,
+		)); 
 	}
 	
 	public function actionAbout() {
 		$this->layout='//layouts/main_other';
 		$this->render('about');
+	}
+	
+	public function actionAddurl() {
+		$this->layout='//layouts/main_other';
+		
+		$model=new Item;
+		
+		// Uncomment the following line if AJAX validation is needed
+// 		$this->performAjaxValidation($model);
+		
+		if(isset($_POST['Item']))
+		{
+			$model->attributes=$_POST['Item'];
+			$model->STATUS = "审核";
+			if($model->save())
+				$this->render('addurl', array('model'=>$model,'info'=>"添加成功！"));
+		}
+		
+		$this->render('addurl',array(
+				'model'=>$model,
+		));
 	}
 
 	/**
