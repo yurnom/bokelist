@@ -41,7 +41,7 @@ class SiteController extends Controller
 		$DM = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>3));
 		$ML = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>6));
 		
-		$mongodb = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>23));
+		$nosql = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>23));
 		$mysql = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>24));
 		$oracle = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>25));
 		$cocos2d = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>27));
@@ -50,6 +50,9 @@ class SiteController extends Controller
 		$html5 = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>32));
 		$javascript = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>33));
 		$css = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>34));
+		
+		$tool = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc",array("catogry_id"=>29));
+		$manual = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc",array("catogry_id"=>30));
 		
 		$this->render('index',array(
 				'java'=>$java,
@@ -61,7 +64,7 @@ class SiteController extends Controller
 				'storm'=>$storm,
 				'DM'=>$DM,
 				'ML'=>$ML,
-				'mongodb'=>$mongodb,
+				'nosql'=>$nosql,
 				'mysql'=>$mysql,
 				'oracle'=>$oracle,
 				'cocos2d'=>$cocos2d,
@@ -69,6 +72,8 @@ class SiteController extends Controller
 				'html5'=>$html5,
 				'javascript'=>$javascript,
 				'css'=>$css,
+				'tool'=>$tool,
+				'manual'=>$manual,
 		)); 
 	}
 	

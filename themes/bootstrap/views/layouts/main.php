@@ -104,8 +104,7 @@
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">数据库技术 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-						    <li class="nav-header">NoSql</li>
-							<li><a tabindex="-1" href="#tbMongoDB">MongoDB</a></li>
+							<li><a tabindex="-1" href="#tbNoSql">NoSql</a></li>
 							<li class="nav-header">Sql</li>
 							<li><a tabindex="-1" href="#tbMysql">Mysql</a></li>
 							<li><a tabindex="-1" href="#tbOracle">Oracle</a></li>
@@ -143,14 +142,7 @@
 <!-- 					<li><a href="#tbNew">IT新闻</a></li> -->
 <!-- 					<li><a href="#tbOurstory">程序员那些事</a></li> -->
 					<li><a href="#tbTool">常用工具</a></li>
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">速查手册 <span class="caret"></span></a>
-						<ul id="yw53" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbMLanguage">编程语言</a></li>
-							<li><a tabindex="-1" href="#tbMFront">前端技术</a></li>
-							<li><a tabindex="-1" href="#tbMDatabase">数据库</a></li>
-							<li><a tabindex="-1" href="#tbMOther">其它</a></li>
-						</ul>
-					</li>
+					<li><a href="#tbManual">速查手册</a></li>
 				</ul>
 			</div>
 		</div>

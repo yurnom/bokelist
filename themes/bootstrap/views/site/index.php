@@ -98,14 +98,14 @@ $this->pageTitle=Yii::app()->name;
 			<div class="page-header"><h1>数据库技术 <small>Sql & NoSql</small></h1></div>
 			<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
 			  <ul class="nav nav-tabs">
-			    <li class="active" id="tbMongoDB"><a href="#tabMongoDB" data-toggle="tab">MongoDB</a></li>
+			    <li class="active" id="tbNoSql"><a href="#tabNoSql" data-toggle="tab">NoSql</a></li>
 			    <li id="tbMysql"><a href="#tabMysql" data-toggle="tab">Mysql</a></li>
 			    <li id="tbOracle"><a href="#tabOracle" data-toggle="tab">Oracle</a></li>
 			  </ul>
 			  <div class="tab-content">
-			    <div class="tab-pane active" id="tabMongoDB">
+			    <div class="tab-pane active" id="tabNoSql">
 			    	<?php
-					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$mongodb,'columns'=>3));
+					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$nosql,'columns'=>3));
 					    $this->endWidget();
 					?>
 			    </div>
@@ -201,6 +201,32 @@ $this->pageTitle=Yii::app()->name;
 			</div>
 		</section>
         <hr style="border-top:1px dashed #00adef;">
+        <section id="tbTool">
+        	<div class="page-header"><h1>常用工具 <small>开发人员在线工具</small></h1></div>
+        	<table class="table table-bordered table-hover">
+        		<tbody>
+        			<?php foreach($tool as $item) {?>
+        			<tr>
+        				<td><a href="<?php echo $item->link?>" target="_blank"><?php echo $item->name?></a></td>
+        				<td><?php echo $item->DESCRIPTION?></td>
+        			</tr>
+        			<?php }?>
+        		</tbody>
+        	</table>
+        </section>
+        <section id="tbManual">
+        	<div class="page-header"><h1>速查手册 <small>各种教程、各种手册</small></h1></div>
+        	<table class="table table-bordered table-hover">
+        		<tbody>
+        			<?php foreach($manual as $item) {?>
+        			<tr>
+        				<td><a href="<?php echo $item->link?>" target="_blank"><?php echo $item->name?></a></td>
+        				<td><?php echo $item->DESCRIPTION?></td>
+        			</tr>
+        			<?php }?>
+        		</tbody>
+        	</table>
+        </section>
     </div>
     </div>
     <div class="span3">
