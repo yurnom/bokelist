@@ -23,10 +23,13 @@ class ColumnWidget extends CWidget {
 		foreach($this->data as $item) {
 			echo CHtml::openTag("td",array("width"=>$this->width));
 			
-			$aOptions = array("href"=>$item->link, "target"=>"_blank");
+			$aOptions = array("href"=>$item->link, "target"=>"_blank", "dbid"=>$item->id);
 			if($item->COLOR) 
-				$aOptions["style"] = "color:".$item->COLOR; 
-			
+				$aOptions["style"] = "color:".$item->COLOR;
+			if($item->DESCRIPTION) {
+				$aOptions["data-toggle"] = "tooltip";
+				$aOptions["title"] = $item->DESCRIPTION;
+			}
 			echo CHtml::openTag("a", $aOptions);
 			echo $item->name;
 			echo CHtml::closeTag("a");

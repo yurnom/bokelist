@@ -76,38 +76,38 @@
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">编程语言 <span class="caret"></span></a>
 						<ul id="yw51" class="dropdown-menu">
 							<li class="nav-header">JVM平台</li>
-							<li><a tabindex="-1" href="#tbJava">Java</a></li>
-							<li><a tabindex="-1" href="#tbScala">Scala</a></li>
-							<li><a tabindex="-1" href="#tbClojure">Clojure</a></li>
+							<li><a tabindex="-1" href="#tbLanguage" sendTo="stJava">Java</a></li>
+							<li><a tabindex="-1" href="#tbLanguage" sendTo="stScala">Scala</a></li>
+							<li><a tabindex="-1" href="#tbLanguage" sendTo="stClojure">Clojure</a></li>
 							<li class="divider"></li>
-							<li><a tabindex="-1" href="#tbCCpp">C/C++</a></li>
-							<li><a tabindex="-1" href="#tbCsharp">C#</a></li>
+							<li><a tabindex="-1" href="#tbLanguage">C/C++</a></li>
+							<li><a tabindex="-1" href="#tbLanguage">C#</a></li>
 							<li class="divider"></li>
 							<li class="nav-header">其它</li>
-							<li><a tabindex="-1" href="#tbPhp">Php</a></li>
-							<li><a tabindex="-1" href="#tbPython">Python</a></li>
-							<li><a tabindex="-1" href="#tbNodeJs">NodeJs</a></li>
+							<li><a tabindex="-1" href="#tbLanguage">Php</a></li>
+							<li><a tabindex="-1" href="#tbLanguage">Python</a></li>
+							<li><a tabindex="-1" href="#tbLanguage">NodeJs</a></li>
 						</ul>
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">大数据 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbHadoop">Hadoop生态圈</a></li>
-							<li><a tabindex="-1" href="#tbSpark">Spark</a></li>
-							<li><a tabindex="-1" href="#tbStorm">Storm</a></li>
+							<li><a tabindex="-1" href="#tbBigData" sendTo="stHadoop">Hadoop生态圈</a></li>
+							<li><a tabindex="-1" href="#tbBigData" sendTo="stSpark">Spark</a></li>
+							<li><a tabindex="-1" href="#tbBigData" sendTo="stStorm">Storm</a></li>
 						</ul>
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">算法相关 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbDM">数据挖掘</a></li>
-							<li><a tabindex="-1" href="#tbML">机器学习</a></li>
+							<li><a tabindex="-1" href="#tbAlgorithm" sendTo="stDM">数据挖掘</a></li>
+							<li><a tabindex="-1" href="#tbAlgorithm" sendTo="stML">机器学习</a></li>
 						</ul>
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">数据库技术 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbNoSql">NoSql</a></li>
+							<li><a tabindex="-1" href="#tbDatabase" sendTo="stNoSql">NoSql</a></li>
 							<li class="nav-header">Sql</li>
-							<li><a tabindex="-1" href="#tbMysql">Mysql</a></li>
-							<li><a tabindex="-1" href="#tbOracle">Oracle</a></li>
+							<li><a tabindex="-1" href="#tbDatabase" sendTo="stMysql">Mysql</a></li>
+							<li><a tabindex="-1" href="#tbDatabase" sendTo="stOracle">Oracle</a></li>
 						</ul>
 					</li>
 					<!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">游戏开发 <span class="caret"></span></a>
@@ -118,23 +118,17 @@
 					</li> -->
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">移动开发 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbiOS">iOS</a></li>
-							<li><a tabindex="-1" href="#tbAndriod">Andriod</a></li>
+							<li><a tabindex="-1" href="#tbMobile" sendTo="stiOS">iOS</a></li>
+							<li><a tabindex="-1" href="#tbMobile" sendTo="stAndroid">Android</a></li>
 						</ul>
 					</li>
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">前端 <span class="caret"></span></a>
-						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbHTML5">HTML5</a></li>
-							<li><a tabindex="-1" href="#tbJavaScript">JavaScript</a></li>
-							<li><a tabindex="-1" href="#tbCss">Css</a></li>
-						</ul>
-					</li>
+					<li><a href="#tbFront">前端</a></li>
 					<li><a href="#tbArchitecture">架构</a></li>
-					<li><a href="#tbTest">测试</a></li>
+					<li><a href="#tbLinux">Linux</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">其它 <span class="caret"></span></a>
 						<ul id="yw52" class="dropdown-menu">
-							<li><a tabindex="-1" href="#tbView">可视化</a></li>
-							<li><a tabindex="-1" href="#tbSAS">SAS</a></li>
+							<li><a tabindex="-1" href="#tbOther">可视化</a></li>
+							<li><a tabindex="-1" href="#tbOther">SAS</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -148,7 +142,6 @@
 		</div>
 	</div>
 </div>
-
 
 <div class="container" id="page">
 	<?php echo $content; ?>
@@ -169,26 +162,6 @@
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/application.js"></script>
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/stickUp.js"></script>
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.scrollUp.min.js"></script>
-<script type="text/javascript">
-	//initiating jQuery
-	jQuery(function($) {
-		$(document).ready( function() {
-			//enabling stickUp on the '.navbar-wrapper' class
-			$('.myroll').stickUp({
-			});
-		});
-	});
-
-	$(function(){
-		$.scrollUp({
-			animation: 'fade',
-			scrollImg: { active: true, type: 'background' }
-		});
-	});
-
-	$(function(){
-		$("a[data-toggle=tooltip]").tooltip()
-	})
-</script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/my.js"></script>
 </body>
 </html>

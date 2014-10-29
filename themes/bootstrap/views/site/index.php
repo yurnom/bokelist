@@ -17,14 +17,13 @@ $this->pageTitle=Yii::app()->name;
 				    $this->endWidget();
 				?>
 		</section>
-        
-        <section id="tbJvm">
+        <section id="tbLanguage">
 			<div class="page-header"><h1 align="right"><small>Hello World</small> 编程语言</h1></div>
-			<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+			<div class="tabbable tabs-left">
 			  <ul class="nav nav-tabs">
-			    <li class="active" id="tbJava"><a href="#tabJava" data-toggle="tab">Java</a></li>
-			    <li id="tbScala"><a href="#tabScala" data-toggle="tab">Scala</a></li>
-			    <li id="tbClojure"><a href="#tabClojure" data-toggle="tab">Clojure</a></li>
+			    <li class="active"><a href="#tabJava" data-toggle="tab" getFrom="stJava">Java</a></li>
+			    <li><a href="#tabScala" data-toggle="tab" getFrom="stScala">Scala</a></li>
+			    <li><a href="#tabClojure" data-toggle="tab" getFrom="stClojure">Clojure</a></li>
 			  </ul>
 			  <div class="tab-content">
 			    <div class="tab-pane active" id="tabJava">
@@ -40,14 +39,13 @@ $this->pageTitle=Yii::app()->name;
 			  </div>
 			</div>
         </section>
-      
-		<section>
+		<section id="tbBigData">
 			<div class="page-header"><h1>大数据 <small>Hadoop+Spark+Storm+...</small></h1></div>
 			<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
 			  <ul class="nav nav-tabs">
-			    <li class="active" id="tbHadoop"><a href="#tabHadoop" data-toggle="tab">Hadoop生态圈</a></li>
-			    <li id="tbSpark"><a href="#tabSpark" data-toggle="tab">Spark</a></li>
-			    <li id="tbStorm"><a href="#tabStorm" data-toggle="tab">Storm</a></li>
+			    <li class="active"><a href="#tabHadoop" data-toggle="tab">Hadoop生态圈</a></li>
+			    <li><a href="#tabSpark" data-toggle="tab" getFrom="stSpark">Spark</a></li>
+			    <li><a href="#tabStorm" data-toggle="tab" getFrom="stStorm">Storm</a></li>
 			  </ul>
 			  <div class="tab-content">
 			    <div class="tab-pane active" id="tabHadoop">
@@ -71,12 +69,12 @@ $this->pageTitle=Yii::app()->name;
 			  </div>
 			</div>
 		</section>
-		  <section>
+		<section id="tbAlgorithm">
 			<div class="page-header"><h1 align="right"><small>体会算法之美</small> 算法相关</h1></div>
-			<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+			<div class="tabbable tabs-left">
 			  <ul class="nav nav-tabs">
-			    <li class="active" id="tbDM"><a href="#tabDM" data-toggle="tab">数据挖掘</a></li>
-			    <li id="tbML"><a href="#tabML" data-toggle="tab">机器学习</a></li>
+			    <li class="active"><a href="#tabDM" data-toggle="tab" getFrom="stDM">数据挖掘</a></li>
+			    <li><a href="#tabML" data-toggle="tab" getFrom="stML">机器学习</a></li>
 			  </ul>
 			  <div class="tab-content">
 			    <div class="tab-pane active" id="tabDM">
@@ -94,13 +92,13 @@ $this->pageTitle=Yii::app()->name;
 			  </div>
 			</div>
 		</section>
-	    <section>
+	    <section id="tbDatabase">
 			<div class="page-header"><h1>数据库技术 <small>Sql & NoSql</small></h1></div>
 			<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
 			  <ul class="nav nav-tabs">
-			    <li class="active" id="tbNoSql"><a href="#tabNoSql" data-toggle="tab">NoSql</a></li>
-			    <li id="tbMysql"><a href="#tabMysql" data-toggle="tab">Mysql</a></li>
-			    <li id="tbOracle"><a href="#tabOracle" data-toggle="tab">Oracle</a></li>
+			    <li class="active"><a href="#tabNoSql" data-toggle="tab" getFrom="stNoSql">NoSql</a></li>
+			    <li><a href="#tabMysql" data-toggle="tab" getFrom="stMysql">Mysql</a></li>
+			    <li><a href="#tabOracle" data-toggle="tab" getFrom="stOracle">Oracle</a></li>
 			  </ul>
 			  <div class="tab-content">
 			    <div class="tab-pane active" id="tabNoSql">
@@ -147,12 +145,12 @@ $this->pageTitle=Yii::app()->name;
 			  </div>
 			</div>
         </section> -->
-		<section>
+		<section id="tbMobile">
 			<div class="page-header"><h1 align="right"><small>互联网时代</small> 移动开发</h1></div>
 			<div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
 			  <ul class="nav nav-tabs">
-			    <li class="active" id="tbiOS"><a href="#tabiOS" data-toggle="tab">iOS</a></li>
-			    <li id="tbAndroid"><a href="#tabAndroid" data-toggle="tab">Android</a></li>
+			    <li class="active"><a href="#tabiOS" data-toggle="tab" getFrom="stiOS">iOS</a></li>
+			    <li><a href="#tabAndroid" data-toggle="tab" getFrom="stAndroid">Android</a></li>
 			  </ul>
 			  <div class="tab-content">
 			    <div class="tab-pane active" id="tabiOS">
@@ -170,36 +168,28 @@ $this->pageTitle=Yii::app()->name;
 			  </div>
 			</div>
         </section>
-        <section>
+        <section id="tbFront">
 			<div class="page-header"><h1>前端 <small>Javascript+Css+HTML</small></h1></div>
-			<div class="tabbable tabs-right"> <!-- Only required for left/right tabs -->
-			  <ul class="nav nav-tabs">
-			    <li class="active" id="tbHTML5"><a href="#tabHTML5" data-toggle="tab">HTML5</a></li>
-			    <li id="tbJavaScript"><a href="#tabJavaScript" data-toggle="tab">JavaScript</a></li>
-			    <li id="tbCss"><a href="#taCss" data-toggle="tab">Css</a></li>
-			  </ul>
-			  <div class="tab-content">
-			    <div class="tab-pane active" id="tabHTML5">
-			    	<?php
-					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$html5,'columns'=>3));
-					    $this->endWidget();
-					?>
-			    </div>
-			    <div class="tab-pane" id="tabJavaScript">
-			    	<?php
-					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$javascript,'columns'=>3));
-					    $this->endWidget();
-					?>
-			    </div>
-			    <div class="tab-pane" id="tabCss">
-			    	<?php
-					    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$css,'columns'=>3));
-					    $this->endWidget();
-					?>
-			    </div>
-			  </div>
-			</div>
+			<?php
+			    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$front,'columns'=>4));
+			    $this->endWidget();
+			?>
 		</section>
+		<section id="tbArchitecture">
+			<div class="page-header"><h1 align="right"><small></small> 架构</h1></div>
+			<?php
+			    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$architecture,'columns'=>4));
+			    $this->endWidget();
+			?>
+		</section>
+		<section id="tbLinux">
+			<div class="page-header"><h1>Linux <small></small></h1></div>
+			<?php
+			    $this->beginWidget('ext.widget.ColumnWidget',array('data'=>$linux,'columns'=>4));
+			    $this->endWidget();
+			?>
+		</section>
+		<br>
         <hr style="border-top:1px dashed #00adef;">
         <section id="tbTool">
         	<div class="page-header"><h1>常用工具 <small>开发人员在线工具</small></h1></div>

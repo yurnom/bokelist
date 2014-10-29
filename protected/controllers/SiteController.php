@@ -21,6 +21,19 @@ class SiteController extends Controller
 		);
 	}
 
+
+	/**
+	 * 对点击次数进行计数
+	 */
+	public function actionClick() {
+		if(Yii::app()->request->isAjaxRequest){
+			$dbid = Yii::app()->request->getParam('dbid');
+			$model = Item::model()->findByPk($dbid);
+			$model->click += 1;
+			$model->save();
+		}
+	}
+	
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
@@ -47,9 +60,9 @@ class SiteController extends Controller
 		$cocos2d = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>27));
 		$u3d = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>28));
 		
-		$html5 = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>32));
-		$javascript = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>33));
-		$css = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 18",array("catogry_id"=>34));
+		$front = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 24",array("catogry_id"=>31));
+		$architecture = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 24",array("catogry_id"=>35));
+		$linux = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc limit 0, 24",array("catogry_id"=>36));
 		
 		$tool = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc",array("catogry_id"=>29));
 		$manual = Item::model()->findAll("catogry_id=:catogry_id and STATUS='有效' order by rank desc",array("catogry_id"=>30));
@@ -69,11 +82,11 @@ class SiteController extends Controller
 				'oracle'=>$oracle,
 				'cocos2d'=>$cocos2d,
 				'u3d'=>$u3d,
-				'html5'=>$html5,
-				'javascript'=>$javascript,
-				'css'=>$css,
 				'tool'=>$tool,
 				'manual'=>$manual,
+				'front'=>$front,
+				'linux'=>$linux,
+				'architecture'=>$architecture,
 		)); 
 	}
 	
