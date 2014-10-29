@@ -163,5 +163,6 @@
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/stickUp.js"></script>
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.scrollUp.min.js"></script>
 <script src="<?php echo Yii::app()->baseUrl; ?>/js/my.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap.js"></script>
 </body>
 </html>
